@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/RetroTable.css';
 import { useTranslation } from 'react-i18next';
 import { RetrogradeData, RetrogradeItem } from '../types/retrograde';
