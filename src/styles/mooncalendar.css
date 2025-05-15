@@ -1,0 +1,190 @@
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin: 2rem auto;
+
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  font-family: 'Orbitron', sans-serif;
+  color: #f0f0f0;
+  
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.calendar-title {
+  font-size: 2.2rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 6px #8ab4f8, 0 0 20px #c8e1ff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.rdp {
+  --rdp-accent-color: #facc15;
+  --rdp-background-color: transparent;
+  --rdp-cell-size: 40px;
+
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+
+  width: 100%;
+  max-width: 340px;
+}
+
+.monthly-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.moon-day-card {
+  flex: 0 1 calc(14.28% - 10px);
+  min-width: 120px;
+  max-width: 160px;
+  min-height: 140px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.moon-day-card:hover {
+  background-color: rgba(250, 204, 21, 0.08);
+  transform: scale(1.03);
+  box-shadow: 0 0 8px rgba(250, 204, 21, 0.2);
+}
+
+.moon-day-card:focus {
+  outline: 2px solid #ffd700;
+}
+
+.moon-day-card * {
+  pointer-events: none;
+}
+
+.moon-phase-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin: 0.5rem 0;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+.moon-day-card p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+  margin: 0.2rem 0;
+  text-align: center;
+}
+
+.phase-filter {
+  margin: 2rem 0;
+}
+
+.phase-filter label {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.phase-filter select {
+  background: #111;
+  color: white;
+  border: 1px solid #444;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.moon-info-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.moon-info-card:hover {
+  transform: scale(1.02);
+}
+
+.return-today-wrapper {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.return-today-button,
+.toggle-button {
+  background-color: #ffd700;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.return-today-button:hover,
+.toggle-button:hover {
+  background-color: #ffcc00;
+}
+
+.return-today-wrapper,
+.view-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .moon-day-card {
+    flex: 0 1 calc(33.333% - 10px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .moon-day-card {
+    flex: 0 1 calc(50% - 10px);
+    min-height: 120px;
+  }
+
+  .moon-phase-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .moon-day-card p {
+    font-size: 0.8rem;
+  }
+
+  .moon-info-card {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}

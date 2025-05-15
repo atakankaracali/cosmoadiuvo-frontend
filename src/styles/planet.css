@@ -1,0 +1,15 @@
+.planet-sphere {
+    border-radius: 50%;
+    box-shadow:
+      0 0 10px rgba(255, 255, 255, 0.1),
+      0 0 20px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .planet-sphere:hover {
+    transform: scale(1.05);
+    box-shadow:
+      0 0 15px rgba(255, 255, 255, 0.3),
+      0 0 25px rgba(255, 255, 255, 0.1);
+  }
+  

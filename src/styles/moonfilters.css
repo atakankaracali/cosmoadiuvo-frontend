@@ -1,0 +1,42 @@
+.moon-filters {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .moon-filters label {
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  
+  .moon-filters {
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .moon-date-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #facc15;
+  }
+  
+  .rdp {
+    --rdp-accent-color: #facc15;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .rdp-day_selected {
+    background-color: #facc15 !important;
+    color: black !important;
+    font-weight: bold;
+    box-shadow: 0 0 12px #facc15aa;
+  }
+  

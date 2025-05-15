@@ -1,0 +1,150 @@
+/* Ana kapsayıcı */
+.eclipse-calendar-container {
+    padding: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: white;
+}
+
+/* Başlık */
+.eclipse-title {
+    font-size: 2.5rem;
+    margin-bottom: 28px;
+    text-align: center;
+    text-shadow: 0 0 6px #8ab4f8, 0 0 20px #c8e1ff;
+    position: relative;
+}
+
+/* Filtreler (butonlar + dropdown) */
+.eclipse-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Filtre butonları */
+.eclipse-filters button {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(4px);
+    font-weight: 500;
+}
+
+.eclipse-filters button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.eclipse-filters button.active {
+    background: linear-gradient(90deg, #ffcc33, #ff66c4);
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba(255, 204, 51, 0.6);
+}
+
+/* Yıl seçimi */
+.year-dropdown {
+    padding: 8px 12px;
+    border-radius: 12px;
+    background-color: #111;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+    font-size: 1rem;
+}
+
+/* Tutulma kart listesi */
+.eclipse-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Tutulma kartları */
+.eclipse-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 20px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.eclipse-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 28px rgba(255, 255, 255, 0.2);
+}
+
+/* Solar kart stili */
+.eclipse-card.solar {
+    border-image: linear-gradient(45deg, #f5d300, #ff9f1c) 1;
+}
+
+/* Lunar kart stili */
+.eclipse-card.lunar {
+    border-image: linear-gradient(45deg, #6a85ff, #b8c6ff) 1;
+}
+
+/* Başlık ve metinler */
+.eclipse-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.eclipse-card p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Mobil ve tablet uyumu */
+@media (max-width: 768px) {
+    .eclipse-title {
+        font-size: 2rem;
+    }
+
+    .eclipse-filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .year-dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .eclipse-card h3 {
+        font-size: 1rem;
+    }
+
+    .eclipse-card p {
+        font-size: 0.9rem;
+    }
+}
+
+.next-eclipse-banner {
+    margin: 0 auto 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 12px 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+.countdown {
+    font-weight: bold;
+    color: #ffde59;
+    margin-left: 8px;
+}

@@ -1,0 +1,95 @@
+.retro-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+.planet-retrogrades {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.planet-retrogrades h2 {
+  color: #facc15;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.planet-retrogrades table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(34, 34, 34, 0.8);
+  color: #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.planet-retrogrades th,
+.planet-retrogrades td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  font-size: 0.95rem;
+}
+
+.planet-retrogrades th {
+  background-color: #333;
+  font-weight: bold;
+  color: #facc15;
+}
+
+.planet-retrogrades tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+
+  .planet-retrogrades table,
+  .planet-retrogrades thead,
+  .planet-retrogrades tbody,
+  .planet-retrogrades th,
+  .planet-retrogrades td,
+  .planet-retrogrades tr {
+    display: block;
+    width: 100%;
+  }
+
+  .planet-retrogrades thead {
+    display: none;
+  }
+
+  .planet-retrogrades tr {
+    border: 1px solid #444;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: rgba(34, 34, 34, 0.9);
+    padding: 0.5rem;
+  }
+
+  .planet-retrogrades td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+    text-align: left;
+    border-bottom: 1px solid #333;
+  }
+
+  .planet-retrogrades td::before {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    width: 45%;
+    font-weight: bold;
+    color: #facc15;
+    white-space: nowrap;
+    content: attr(data-column);
+  }
+
+  .planet-retrogrades td:last-child {
+    border-bottom: none;
+  }
+}
