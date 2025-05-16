@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../styles/notfound.css";
+import "../styles/nonfound.css";
 import { useTranslation } from "react-i18next";
 import StarsOverlay from "../components/StarsOverlay";
 
