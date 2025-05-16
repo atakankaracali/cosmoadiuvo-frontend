@@ -16,7 +16,7 @@ const RetroList: React.FC = () => {
 
   const fetchRetrogradeData = async () => {
     try {
-      const response = await axios.get<RetrogradeData>(`${import.meta.env.VITE_BACKEND_URL}/api/retrogrades`);
+      const response = await axios.get<RetrogradeData>(`${import.meta.env.VITE_BACKEND_URL}/api/retro`);
       setRetrogrades(response.data);
       setLoading(false);
     } catch (err: any) {

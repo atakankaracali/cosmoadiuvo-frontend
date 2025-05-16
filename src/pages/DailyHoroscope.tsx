@@ -13,7 +13,7 @@ const DailyHoroscope = () => {
     const handleGenerate = async (sign: string, date: string, lang: string) => {
         setLoading(true);
         try {
-            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/generate-horoscope`, {
+            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/horoscope`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ sign, date, lang })

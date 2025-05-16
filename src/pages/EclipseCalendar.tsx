@@ -18,7 +18,7 @@ const EclipseCalendar = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/eclipses`);
+            const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/eclipse`);
             const data = await res.json();
             const parsed: EclipseEvent[] = data.eclipses.map((e: any) => ({
                 date: e.date,

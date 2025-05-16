@@ -34,7 +34,7 @@ const MoonCalendar: React.FC = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get<MoonData[]>(`${import.meta.env.VITE_BACKEND_URL}/api/moon-data`);
+      const response = await axios.get<MoonData[]>(`${import.meta.env.VITE_BACKEND_URL}/api/moon`);
       setAllData(response.data);
       setIsMonthlyLoaded(true);
     } catch (error) {
