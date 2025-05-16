@@ -9,13 +9,13 @@ const StarsOverlay = () => {
         camera={{ position: [0, 0, 1], fov: 75 }}
       >
         <Stars
-          radius={150}
-          depth={80}
-          count={5000}
-          factor={6}
-          saturation={0}
+          radius={200}
+          depth={120}
+          count={8000}
+          factor={10}
+          saturation={0.5}
           fade
-          speed={1}
+          speed={1.5}
         />
       </Canvas>
     </div>

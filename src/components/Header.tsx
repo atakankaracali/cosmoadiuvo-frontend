@@ -11,6 +11,7 @@ const Header = () => {
     const lang = e.target.value;
     i18n.changeLanguage(lang);
     localStorage.setItem("i18nextLng", lang);
+    document.documentElement.lang = lang;
   };
 
   return (

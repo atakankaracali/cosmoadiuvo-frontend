@@ -22,9 +22,14 @@ i18n
       escapeValue: false,
     },
     detection: {
-      order: ['localStorage', 'navigator'],
+      order: ['localStorage', 'htmlTag', 'navigator'],
       caches: ['localStorage'],
     },
+    react: {
+      useSuspense: false,
+    },
   });
+
+document.documentElement.lang = i18n.language;
 
 export default i18n;
