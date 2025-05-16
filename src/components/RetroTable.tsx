@@ -108,7 +108,10 @@ const RetroTable: React.FC<Props> = ({ retrogrades }) => {
                       <td data-column={t('retrogradelist.zodiacSigns')}>
                         {retrograde.zodiac_signs.map((sign) => zodiacTranslationMap[sign] || sign).join(', ')}
                       </td>
-                      <td data-column={t('retrogradelist.effects')}>
+                      <td
+                        data-column={t('retrogradelist.effects')}
+                        className="effects-cell"
+                      >
                         {t(effectsMap[retrograde.effects] || retrograde.effects)}
                       </td>
                     </tr>
