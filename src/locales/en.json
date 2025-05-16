@@ -213,5 +213,9 @@
         "title": "404 🚀",
         "message": "Oops! The stars couldn’t find this page.",
         "button": "🔙 Return to Galaxy"
+    },
+    "visit": {
+        "counter": "🚀 Total cosmic visitors: {{count}}",
+        "loading": "✨ Counting stardust..."
     }
 }

@@ -213,5 +213,9 @@
         "title": "404 🚀",
         "message": "Hata! Yıldızlar bu sayfayı bulamadı.",
         "button": "🔙 Galaksiye Dön"
+    },
+    "visit": {
+        "counter": "🚀 Toplam kozmik ziyaretçi: {{count}}",
+        "loading": "✨ Yıldız tozları sayılıyor..."
     }
 }

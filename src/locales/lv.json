@@ -213,5 +213,9 @@
         "title": "404 🚀",
         "message": "Ups! Zvaigznes šo lapu nevarēja atrast.",
         "button": "🔙 Atgriezties Galaksijā"
+    },
+    "visit": {
+        "counter": "🚀 Kopējie kosmosa apmeklētāji: {{count}}",
+        "loading": "✨ Skaitām zvaigžņu putekļus..."
     }
 }
