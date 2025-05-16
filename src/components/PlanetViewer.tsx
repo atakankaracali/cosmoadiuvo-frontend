@@ -18,7 +18,7 @@ const Planet = ({ name, size, distance, speed, onClick }: PlanetProps) => {
   useCursor(hovered);
   const { t } = useTranslation();
 
-  const texture = useLoader(THREE.TextureLoader, `/src/assets/${name}.jpg`);
+  const texture = useLoader(THREE.TextureLoader, `/assets/${name}.jpg`);
   texture.wrapS = THREE.RepeatWrapping;
   texture.wrapT = THREE.RepeatWrapping;
   texture.anisotropy = 16;

@@ -10,7 +10,7 @@ const SolarSystemCanvas = () => {
   const [selectedPlanet, setSelectedPlanet] = useState<string | null>(null);
   const selectedRef = useRef<Object3D | null>(null);
 
-  const sunTexture = useLoader(TextureLoader, "/src/assets/Sun.jpg");
+  const sunTexture = useLoader(TextureLoader, "/assets/Sun.jpg");
   sunTexture.wrapS = RepeatWrapping;
   sunTexture.wrapT = RepeatWrapping;
   sunTexture.anisotropy = 16;
