@@ -14,7 +14,7 @@ const Hero = () => {
             {t("hero.button")}
           </a>
           <a href="/solar-system" className="hero-button secondary">
-            🪐 {t("hero.exploreSolarSystem")}
+            {t("hero.exploreSolarSystem")}
           </a>
         </div>
       </div>
