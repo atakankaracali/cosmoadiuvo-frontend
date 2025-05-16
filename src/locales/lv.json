@@ -33,9 +33,9 @@
     },
     "hero": {
         "title": "CosmoAdiuvo 🚀",
-        "subtitle": "Izpēti Visumu ar 3D kosmosa simulāciju un Mākslīgā intelekta astroloģijas asistentu!",
-        "button": "Atklāt manu zīmi",
-        "exploreSolarSystem": "Izpētīt Saules sistēmu"
+        "subtitle": "Astroloģija satiek AI. Ienāc kosmosā.",
+        "button": "🔮 Atklāj manu zīmi",
+        "exploreSolarSystem": "🪐 Pēti 3D kosmosu"
     },
     "moonfilters": {
         "selectDate": "Izvēlies datumu:"
@@ -86,6 +86,7 @@
         "generate": "Ģenerēt horoskopu",
         "loading": "Konsultējamies ar zvaigznēm...",
         "resultTitle": "Jūsu Horoskops",
+        "disclaimer": "⚠️ Šie horoskopi ir paredzēti izklaidei un iedvesmai. Tie nav profesionāli ieteikumi. Izmanto uz savu kosmisko atbildību! ✨",
         "ratings": {
             "love": "Mīlestība",
             "luck": "Veiksme",
@@ -207,5 +208,10 @@
             "kuzey Asya": "ziemeļu Āzija",
             "Orta Doğu": "Tuvie Austrumi"
         }
+    },
+    "notfound": {
+        "title": "404 🚀",
+        "message": "Ups! Zvaigznes šo lapu nevarēja atrast.",
+        "button": "🔙 Atgriezties Galaksijā"
     }
 }

@@ -33,9 +33,9 @@
     },
     "hero": {
         "title": "CosmoAdiuvo 🚀",
-        "subtitle": "Explore the universe with 3D Space Simulation + AI Astrology Assistant!",
-        "button": "Reveal Your Sign",
-        "exploreSolarSystem": "Explore the Solar System"
+        "subtitle": "Astrology meets AI. Step into the cosmos.",
+        "button": "🔮 Reveal My Sign",
+        "exploreSolarSystem": "🪐 Explore 3D Space"
     },
     "moonfilters": {
         "selectDate": "Select Date:"
@@ -86,6 +86,7 @@
         "generate": "Generate Horoscope",
         "loading": "Consulting the stars...",
         "resultTitle": "Your Horoscope",
+        "disclaimer": "⚠️ These horoscopes are generated for fun and inspiration. They are not intended as professional advice. Use at your own cosmic risk! ✨",
         "ratings": {
             "love": "Love",
             "luck": "Luck",
@@ -207,5 +208,10 @@
             "kuzey Asya": "northern Asia",
             "Orta Doğu": "Middle East"
         }
+    },
+    "notfound": {
+        "title": "404 🚀",
+        "message": "Oops! The stars couldn’t find this page.",
+        "button": "🔙 Return to Galaxy"
     }
 }

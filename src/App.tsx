@@ -5,6 +5,7 @@ import DailyHoroscope from "./pages/DailyHoroscope";
 import RetroPage from "./pages/RetroList";
 import SolarSystemPage from "./pages/SolarSystem";
 import EclipseCalendar from "./pages/EclipseCalendar";
+import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/solar-system" element={<SolarSystemPage />} />
         <Route path="/retro-planets" element={<RetroPage />} />
         <Route path="/eclipse-calendar" element={<EclipseCalendar />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import '../styles/dailyhoroscope.css';
 
 const zodiacSigns = [
     'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
@@ -42,6 +43,9 @@ const HoroscopeForm = ({ onGenerate }: Props) => {
             <button onClick={() => onGenerate(sign, date, lang)}>
                 {t('dailyhoroscope.generate')}
             </button>
+            <p className="horoscope-disclaimer">
+                {t("dailyhoroscope.disclaimer")}
+            </p>
         </div>
     );
 };

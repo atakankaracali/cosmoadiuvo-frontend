@@ -33,9 +33,9 @@
     },
     "hero": {
         "title": "CosmoAdiuvo 🚀",
-        "subtitle": "3D Uzay Simülasyonu + Yapay Zeka Astroloji Asistanı ile evreni keşfet!",
-        "button": "Burcumu Göster",
-        "exploreSolarSystem": "Güneş Sistemini Keşfet"
+        "subtitle": "Astroloji ve yapay zekayla evrene adım at.",
+        "button": "🔮 Burcumu Göster",
+        "exploreSolarSystem": "🪐 Uzayı Keşfet"
     },
     "moonfilters": {
         "selectDate": "Tarih Seç:"
@@ -86,6 +86,7 @@
         "generate": "Burç Yorumunu Oluştur",
         "loading": "Yıldızlara danışılıyor...",
         "resultTitle": "Burç Yorumunuz",
+        "disclaimer": "⚠️ Bu burç yorumları sadece eğlence ve ilham amaçlı üretilmiştir. Profesyonel tavsiye yerine geçmez. Kozmik sorumluluk tamamen size aittir! ✨",
         "ratings": {
             "love": "Aşk",
             "luck": "Şans",
@@ -207,5 +208,10 @@
             "kuzey Asya": "kuzey Asya",
             "Orta Doğu": "Orta Doğu"
         }
+    },
+    "notfound": {
+        "title": "404 🚀",
+        "message": "Hata! Yıldızlar bu sayfayı bulamadı.",
+        "button": "🔙 Galaksiye Dön"
     }
 }
