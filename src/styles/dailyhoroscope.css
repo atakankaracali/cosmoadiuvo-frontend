@@ -40,8 +40,24 @@
   font-size: 1rem;
   margin-bottom: 1rem;
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   font-family: 'Orbitron', sans-serif;
   box-sizing: border-box;
+  min-height: 44px;
+}
+
+.horoscope-container select {
+  background-color: #111 !important;
+  color: #fff !important;
+  border: 1px solid #444;
+  overflow-y: auto;
+}
+
+.horoscope-container option {
+  background-color: #111 !important;
+  color: #fff !important;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .horoscope-container input[type="date"]::-webkit-calendar-picker-indicator {
@@ -136,5 +152,15 @@
 
   .horoscope-disclaimer {
     font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .horoscope-container h2 {
+    font-size: 1.15rem;
+  }
+
+  .horoscope-container label {
+    font-size: 0.85rem;
   }
 }
