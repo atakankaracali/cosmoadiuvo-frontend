@@ -53,6 +53,15 @@ const MoonCalendar: React.FC = () => {
           item.date.startsWith(selectedDateStr.slice(0, 7))
       );
 
+  const getLocalizedDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return new Intl.DateTimeFormat(i18n.language, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }).format(date);
+  };
+
   return (
     <div className="calendar-container">
       <h1 className="calendar-title">{t("mooncalendar.title")}</h1>
@@ -78,37 +87,34 @@ const MoonCalendar: React.FC = () => {
 
       {viewMode === 'daily' && dailyData && (
         <div className="moon-info-card">
-          <h2>
-            {new Date(dailyData.date).toLocaleDateString(
-              i18n.language || "en",
-              {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              }
-            )}
-          </h2>
+          <h2>{getLocalizedDate(dailyData.date)}</h2>
           <img
             src={getMoonImageFromPhase(dailyData.phase)}
             alt={dailyData.phase}
             className="moon-phase-img"
           />
-          <p><strong>{t("mooncalendar.phase")}:</strong> {t(`mooncalendar.phases.${dailyData.phase}`)}</p>
-          <p><strong>{t("mooncalendar.illumination")}:</strong> {dailyData.illumination}</p>
+          <p>
+            <strong>{t("mooncalendar.phase")}:</strong>{' '}
+            {t(`mooncalendar.phases.${dailyData.phase}`)}
+          </p>
+          <p>
+            <strong>{t("mooncalendar.illumination")}:</strong> {dailyData.illumination}
+          </p>
         </div>
       )}
-
 
       {viewMode === 'monthly' && isMonthlyLoaded && (
         <>
           <div className="phase-filter">
             <label>{t("mooncalendar.filterLabel")}</label>
             <select value={filterPhase} onChange={(e) => setFilterPhase(e.target.value)}>
-              {Object.keys(t("mooncalendar.phases", { returnObjects: true }) as Record<string, string>).map((key) => (
-                <option key={key} value={key}>
-                  {t(`mooncalendar.phases.${key}`)}
-                </option>
-              ))}
+              {Object.keys(t("mooncalendar.phases", { returnObjects: true }) as Record<string, string>).map(
+                (key) => (
+                  <option key={key} value={key}>
+                    {t(`mooncalendar.phases.${key}`)}
+                  </option>
+                )
+              )}
             </select>
           </div>
 
@@ -125,7 +131,7 @@ const MoonCalendar: React.FC = () => {
                 tabIndex={0}
                 onKeyDown={(e) => e.key === 'Enter' && setSelectedDate(new Date(item.date))}
               >
-                <p>{item.date}</p>
+                <p>{getLocalizedDate(item.date)}</p>
                 <img
                   src={getMoonImageFromPhase(item.phase)}
                   alt={item.phase}
