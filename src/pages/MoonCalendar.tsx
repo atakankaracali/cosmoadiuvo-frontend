@@ -12,7 +12,7 @@ interface MoonData {
 }
 
 const MoonCalendar: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [allData, setAllData] = useState<MoonData[]>([]);
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [filterPhase, setFilterPhase] = useState<string>('All');
@@ -78,7 +78,16 @@ const MoonCalendar: React.FC = () => {
 
       {viewMode === 'daily' && dailyData && (
         <div className="moon-info-card">
-          <h2>{dailyData.date}</h2>
+          <h2>
+            {new Date(dailyData.date).toLocaleDateString(
+              i18n.language || "en",
+              {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              }
+            )}
+          </h2>
           <img
             src={getMoonImageFromPhase(dailyData.phase)}
             alt={dailyData.phase}
@@ -88,6 +97,7 @@ const MoonCalendar: React.FC = () => {
           <p><strong>{t("mooncalendar.illumination")}:</strong> {dailyData.illumination}</p>
         </div>
       )}
+
 
       {viewMode === 'monthly' && isMonthlyLoaded && (
         <>
